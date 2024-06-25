@@ -1,18 +1,29 @@
 def initializeVariables(): (Int,Int,Int,Int,Float,Float)= {
-    val a = 2
-    val b = 3
-    val c = 4
-    val d = 5
-    val k = 4.3f
-    val g = 5.0f
+    var a = 2
+    var b = 3
+    var c = 4
+    var d = 5
+    var k = 4.3f
+    var g = 5.0f
     (a,b,c,d,k,g)
 }
 
 def evaluateExpressions(): Unit = {
-    val (a, b, c, d, k, g) = initializeVariables()
-    printf ("%d", (b-1) * a + c *(d-1))
-    printf ("%d",a+1)
-    printf ("%d",-2 * (g-k) + c)
-    printf ("%d",c+1)
-    printf ("%d",(c+1)*(a+1));
-}
+    var (a, b, c, d, k, g) = initializeVariables()
+    b-=1
+    var result1 = b * a + c * d
+    d -= 1
+    println(result1)
+
+    println(a)
+    a +=1
+
+    println(-2 * (g-k) + c)
+
+    println(c)
+    c +=1
+
+    c += 1
+    println(c*a);
+    a += 1
+} 
